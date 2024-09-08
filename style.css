@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: math;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    background-color: black;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: gainsboro;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.navbar.scrolled {
+    background-color: rgba(128, 128, 128, 0.8); /* Change color as needed */
+}
+
+.navList ul {
+    display: flex;
+    list-style-type: none;
+}
+.navList ul li {
+    padding: 0 30px 0 0;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+}
+.navbar ul li a:hover{
+    color: maroon;
+    transition: .3s;
+}
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 25px 25px 25px;
+}
+.pic1, .pic2{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(2px 4px 6px black);
+}
+.Intro {
+    width: 65%;
+    padding: 30px;
+}
+.logo-div{
+    padding: 15px;
+    text-align: center;
+    background-color: gainsboro;
+    filter: drop-shadow(2px 4px 6px black);
+}
+.logo-div svg {
+    width: 15px;
+    fill: goldenrod;
+}
+.logo {
+    width: 110px;
+    height: 10vh;
+}
+.skills{
+    text-align: center;
+    font-size: 11px;
+    margin: 15px;
+}
+.data {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.about {
+    text-align: center;
+    margin: 30px;
+    font-size: 11px;
+    scroll-margin-top: 60px;
+}
+.about-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 40px;
+}
+.Intro2{
+    width: 50%;
+}
+.certificates{
+    text-align: center;
+    margin: 20px;
+    font-size: 11px;
+}
+.cert{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    align-items: center;
+    justify-items: center;
+}
+.cert img {
+    filter: drop-shadow(2px 4px 6px black);
+    width: 300px;
+}
+.cert-container{
+    margin: 50px;
+}
+.first-div-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: lightgrey;
+}
+.copy {
+    padding: 15px;
+    background-color: lightgrey;
+    text-align: center;
+    line-height: 20px;
+}
+.proj{
+    text-align: center;
+    font-size: 11px;
+    scroll-margin-top: 60px;
+}
+.web-proj img, .data-proj img{
+    width: 200px;
+    height: 15vh;
+}
+.web-proj, .data-proj{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+/* .data-skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+.proj-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px;
+    filter: drop-shadow(5px 5px 6px black);
+    background-color: gainsboro;
+    margin: 10px;
+}
+.btn{
+    margin: 17px 0 7px 0;
+    padding: 2px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btn:hover{
+    background-color: lightpink;
+    transition: .3s;
+}
+
+@media screen and (max-width: 768px) {
+    .Intro p, .Intro2{
+        font-size: 14px;
+    }
+    .Intro h1{
+        font-size: 20px;
+    }
+    .pic1 img{
+        width: 110px;
+    }
+    .skills {
+        font-size: 10px;
+    }
+    .data{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px 20px;
+        justify-items: center;
+    }
+    .logo-div{
+        width: 200px;
+    }
+    .cert img{
+        width: 230px;
+    }
+    .web-proj, .data-proj {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .navList {
+        display: none;
+        width: 30%;
+        height: 160px;
+        position: absolute;
+        top: 59px;
+        right: 0;
+        background-color: gainsboro;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .navList.active {
+        display: flex;
+    }
+
+    .navList ul {
+        flex-direction: column;
+        width: 50%;
+        padding: 0;
+    }
+
+    .navList ul li {
+        padding: 1px ;
+        width: 50%;
+        text-align: center;
+    }
+
+    .navList ul li a {
+        color: black;
+        display: block;
+        padding: 10px;
+    }
+    .cert{
+        text-align: center;
+        display: block;
+    }
+    .cert img{
+        width: 300px;
+    }
+    .hamburger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 21px;
+        background: transparent;
+        border: none;
+        padding: 0;
+        box-sizing: border-box;
+        transition: transform 0.3s ease;
+    }
+    
+    .bar {
+        width: 30px;
+        height: 3px;
+        background: black;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+    
+    .hamburger.active {
+        transform: rotate(180deg);
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0; /* Hide the middle line */
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    .logo{
+        width: 80px;
+        height: 7vh;
+    }
+    .logo-div{
+        width: 100px;
+        height: 100px;
+    }
+    .logo-div h2{
+      font-size: 17px;
+    }
+    .Intro p, .Intro2 p{
+        font-size: 12px;
+    }
+    .about-container{
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Intro2{
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .about{
+        margin: 15px;
+    }
+    .web-proj, .data-proj{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
